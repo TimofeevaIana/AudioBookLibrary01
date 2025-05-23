@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class AudioPart(
     @PrimaryKey val id: String,
     val bookId: String,
-    val fileUrl: String,
+    val fileUrl: String, // URL to audio file
     val duration: Long, // Duration in milliseconds
-    val currentPosition: Long = 0 // Last listened position in milliseconds
+    val currentPosition: Long = 0 // Current position for playback resume
 )
