@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.audiobooklibrary"
-        minSdk = 17
+        minSdk = 12
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -31,6 +31,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.0"
+    }
 }
 
 dependencies {
@@ -48,4 +54,11 @@ dependencies {
     implementation(libs.androidx.media)
 
     implementation(libs.kotlinx.coroutines.android)
+
+    // Jetpack Compose
+    implementation("androidx.compose.ui:ui:1.8.2")
+    implementation("androidx.compose.material3:material3:1.3.2")
+    implementation("androidx.compose.runtime:runtime:1.8.2")
+    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.navigation:navigation-compose:2.9.0")
 }
